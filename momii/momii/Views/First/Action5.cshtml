@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Student>
+<table class="table table-striped">
+    <tr>
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>Student Address</th>
+    </tr>
+
+    @foreach (Student S in Model)
+    {
+        if (S.address == "Pakistan")
+        {
+            <tr>
+                <td><span class="glyphicon glyphicon-user"></span> @S.studentname</td>
+                <td>@S.email</td>
+                <td>@S.address</td>
+            </tr>
+        }
+        else
+        {
+            <tr class="danger">
+                <td>@S.studentname</td>
+                <td>@S.email</td>
+                <td>@S.address</td>
+            </tr>
+        }
+    }
+
+</table>
+
+
+
+
+
+
+@*@model MarchBatch2.Student*@
+
+
+@*<table class="table table-striped">
+        <tr>
+            <th>Student Name</th>
+            <th>Student Email</th>
+            <th>Student Address</th>
+        </tr>
+
+        <tr>
+            <td>@Model.studentname</td>
+            <td>@Model.email</td>
+            <td>@Model.address</td>
+        </tr>
+
+
+        <tr>
+            <td><a href="/First/Action3">@Model.studentname</a></td>
+            <td></td>
+
+            @if(Model.address == "Pakistan")
+            {
+            <td class="text-danger">@Html.DisplayFor(M => M.address)</td>
+            }
+            else
+            {
+                <td class="text-info">@Html.DisplayFor(M => M.address)</td>
+            }
+        </tr>
+    </table>*@
+

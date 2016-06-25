@@ -1,0 +1,62 @@
+﻿
+@model aliMola.Models.Student
+
+@{
+    ViewBag.Title = "SearchResult";
+}
+
+<h2>SearchResult</h2>
+<h3>@ViewBag.message </h3>
+<div class="col-md-8">
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Roll_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roll_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dd>
+
+        </dd>
+    </dl>
+</div>
+<div class="col-md-4">
+    <img src="@Url.Content(Model.imagePath)" width="100%" height="100%" />
+</div>
+<div class="clearfix"></div>
+@Html.ActionLink("Download Cv", "Do

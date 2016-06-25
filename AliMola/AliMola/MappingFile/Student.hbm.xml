@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="AliMola" namespace="AliMola" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Student" table="student" lazy="true" >
+    <id name="Studentid">
+      <column name="studentid"/>
+      <generator class="identity" />
+    </id>
+    <property name="Studentname">
+      <column name="studentname" sql-type="varchar(45)" not-null="false" />
+    </property>
+    <property name="Studentemail">
+      <column name="studentemail" sql-type="varchar(45)" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

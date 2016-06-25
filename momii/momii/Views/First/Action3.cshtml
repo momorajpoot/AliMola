@@ -1,0 +1,70 @@
+﻿
+@using (Html.BeginForm("Action3", "First", FormMethod.Post, new { @usman = "usman", @style = "background-color:red;" }))
+{
+
+
+
+    <div class="col-md-6">
+
+        <h1>
+            Registration Form 1
+        </h1>
+
+        <div class="col-md-3">
+            <label>Student Name: </label>
+        </div>
+        <div class="col-md-3">
+            <input id="studentname" name="studentname" />
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col-md-3">
+            <label>Student Email: </label>
+        </div>
+        <div class="col-md-3">
+            <input id="email" name="email" />
+        </div>
+
+        <div class="clearfix"></div>
+        <br />
+        <button type="submit" class="btn btn-success col-md-offset-5">Save</button>
+
+    </div>
+}
+
+
+<form action='@Url.Action("Action3","First")' method="post">
+
+    <div class="col-md-6">
+
+        <h1>
+            Registration Form 2
+        </h1>
+
+        <div class="col-md-3">
+            <label>Student Name: </label>
+        </div>
+        <div class="col-md-3">
+            <input id="studentname" name="studentname" />
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col-md-3">
+            <label>Student Email: </label>
+        </div>
+        <div class="col-md-3">
+            <input id="email" name="email" />
+        </div>
+
+        <div class="clearfix"></div>
+        <br />
+        <button type="submit" class="btn btn-success col-md-offset-5">Save</button>
+
+    </div>
+</form>
+<div class="clearfix"></div>
+
+@Html.ActionLink("it will go to action3", "Action3", new { @abc = "usmanadsfasdfasdf" }, new { @class = "btn btn-success" })
+<a href='/First/Action3?abc=usman&^nazir'> It will go to action3</a>

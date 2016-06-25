@@ -1,0 +1,45 @@
+﻿@model momii.Student
+
+@using (Html.BeginForm("Action4", "First", FormMethod.Get))
+{
+
+    <div class="form-horizontal">
+        <h4>Student</h4>
+        <hr />
+
+        <div class="form-group">
+            @Html.Label("this is test label")
+            @Html.LabelFor(A => A.studentname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.studentname, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="button" value="Button2" />
+                @Html.ActionLink("click me", "Action4", new { @name = "test name" });
+
+            </div>
+        </div>
+    </div>
+}
+
